@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversario!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="icon" href="Recursos/Iconos/OneIcon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/style2.css">
+</head>
+<body>
+    <audio id="audioPlayer">
+        <source id="audioSource" src="Recursos/Chachachá.mp3" type="audio/mpeg">
+        Tu navegador no soporta la etiqueta de audio.
+    </audio>
+    <div class="Principal-container">
+        <div class="Text-container">
+            <h1>   🎉Feliz Aniversario🎆: 1 año!🎁🎉  </h1>
+        </div>
+    </div>
+    <div class="contador-container">
+        <div class="contador">
+            <h1>Cuanto falta?:</h1>
+            <div class="time" id="dias"><span id="dias-value">0</span><span class="label">Días</span></div>
+            <div class="time" id="horas"><span id="horas-value">0</span><span class="label">Horas</span></div>
+            <div class="time" id="minutos"><span id="minutos-value">0</span><span class="label">Minutos</span></div>
+            <div class="time" id="segundos"><span id="segundos-value">0</span><span class="label">Segundos</span></div>
+        </div>
+    </div>
+    <div class="contenedor-central">
+        <section class="video-seccion">
+            <h1 class="Text-carrusel">Recuerdos a lo largo del año🎥:</h1>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="video-wrapper">
+                            <video src="Recursos/Videos/Primer Video.mp4"></video>
+                            <button class="play-button">&#9658</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="video-wrapper">
+                            <video src="Recursos/Videos/Segundo Video.mp4"></video>
+                            <button class="play-button">&#9658</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="video-wrapper">
+                            <video src="Recursos/Videos/Tercer Video.mp4"></video>
+                            <button class="play-button">&#9658</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="video-wrapper">
+                            <video src="Recursos/Videos/Cuarto Video.mp4"></video>
+                            <button class="play-button">&#9658</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="video-wrapper">
+                            <video src="Recursos/Videos/Quinto Video.mp4"></video>
+                            <button class="play-button">&#9658</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+                <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </section>
+    </div> 
+    <section class="Poema-seccion">
+        <div id="card">
+            <p>Florcita,</p>
+            <p>En este día especial, quiero expresarte cuánto significas para mí. Tu amor ilumina mi vida y llena mi corazón de alegría.</p>
+            <p>Gracias por estar siempre a mi lado. Eres mi compañera de vida y mi mejor amiga.</p>
+            <p>Con todo mi cariño,</p>
+            <p>Tu niño</p>
+        </div>
+        <button onclick="toggleCard()" class="btn cube cube-hover" type="button">
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
+            <div id="button-text" class="text">Abrir Carta</div>
+        </button>
+    </section>
+    <section class="Extra-seccion">
+        <h1>Esta es la playlist que cree para esta pagina, por si la quieres escuchar </h1>
+        <button class="button" onclick=" window.location.href = 'https://open.spotify.com/playlist/6ip1Z1LxiNZ419i3gwNiEP?si=5a157858a5f1460d' "> 
+            <svg viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>Spotify-color</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Color-" transform="translate(-200.000000, -460.000000)" fill="#ffffff"> <path d="M238.16,481.36 C230.48,476.8 217.64,476.32 210.32,478.6 C209.12,478.96 207.92,478.24 207.56,477.16 C207.2,475.96 207.92,474.76 209,474.4 C217.52,471.88 231.56,472.36 240.44,477.64 C241.52,478.24 241.88,479.68 241.28,480.76 C240.68,481.6 239.24,481.96 238.16,481.36 M237.92,488.08 C237.32,488.92 236.24,489.28 235.4,488.68 C228.92,484.72 219.08,483.52 211.52,485.92 C210.56,486.16 209.48,485.68 209.24,484.72 C209,483.76 209.48,482.68 210.44,482.44 C219.2,479.8 230,481.12 237.44,485.68 C238.16,486.04 238.52,487.24 237.92,488.08 M235.04,494.68 C234.56,495.4 233.72,495.64 233,495.16 C227.36,491.68 220.28,490.96 211.88,492.88 C211.04,493.12 210.32,492.52 210.08,491.8 C209.84,490.96 210.44,490.24 211.16,490 C220.28,487.96 228.2,488.8 234.44,492.64 C235.28,493 235.4,493.96 235.04,494.68 M224,460 C210.8,460 200,470.8 200,484 C200,497.2 210.8,508 224,508 C237.2,508 248,497.2 248,484 C248,470.8 237.32,460 224,460" id="Spotify"> </path> </g> </g> </g></svg>
+            Playlist de Spotify 
+        </button>
+    </section> 
+    </div>
+    <div id="playButtonContainer"></div>
+    <script src="Javascript/script.js"></script>
+</body>
+<div class="Container-Derechos">
+    <section>
+        <h1 class="Text-Derechos">© Pagina creada por vixozx <button class="Btn-Secret"onclick=" window.location.href='web_search.html'">🐌</button> 2024</h1>
+    </section>        
+</div>
+</html>
+<!--
+__     ___          _____     
+\ \   / (_)_  _____|__  /_  __
+ \ \ / /| \ \/ / _ \ / /\ \/ /
+  \ V / | |>  < (_) / /_ >  < 
+   \_/  |_/_/\_\___/____/_/\_\ 
+-->
+<!--
+    .----.    
+   / .-"-.`.  \v/
+   | | '\ \ \_/ )
+ ,-\ `-.' /.'  /
+'---`----'----'
+-->
+<!--
+🇹 🇮 🇲 🇪 🇱 🇪 🇸 🇸  🇫 🇱 🇴 🇼 🇪 🇷 🇸 
+-->

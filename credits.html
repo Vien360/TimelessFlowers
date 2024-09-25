@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credits</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(Recursos/Imagenes/Background.jpg);
+    color: yellow;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.credits-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.credits {
+    position: absolute;
+    text-align: center;
+    font-size: 2rem;
+    animation: scroll-up 10s linear forwards;
+}
+
+@keyframes scroll-up {
+    0% {
+        transform: translateY(100%);
+    }
+    80% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(-200%);
+    }
+}
+.text{
+    text-shadow: 0 0 5px #ffa600, 0 0 10px #fcad1a, 0 0 20px #ffa600;
+}
+#final-message {
+    position: absolute;
+    text-shadow: 0 0 5px #8d8c8b, 0 0 10px #bdbcbb, 0 0 20px #555555;
+    bottom: 50%;
+    text-justify: center;
+    transform: translateY(50%);
+    font-size: 3rem;
+    color: white;
+    opacity: 0;
+    animation: show-message 2s ease forwards;
+    animation-delay: 8s;
+    margin-left: 125px;
+    margin-right: 100px;
+}
+
+@keyframes show-message {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="credits-wrapper">
+        <div class="credits">
+            <p class="text">GAGAN-GV</p>
+            <p class="text">YAYA12085</p>
+            <p class="text">SATYAMCHAUDHARYDEV</p>
+            <p class="text">ABANOUBMAGDY1</p>
+            <p class="text">HUEHUETSALETH</p>
+            <p class="text">ANDRERUFFERT</p>
+            <p class="text"> </p>
+            <p class="text"> </p>
+            <p class="text"> </p>
+        </div>
+        <div id="final-message" class="final-message">
+            Thank you for your work, without them I could not have finished my project on time, and also if you managed to find this Easter egg, congratulations. \-vixoZx🐌\
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

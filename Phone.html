@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Recursos/Iconos/NoDisponibleIcon.ico" type="image/x-icon">
+    <title>Página no disponible</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #e0f7fa; 
+            color: #ff7043; 
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .message-container {
+            border: 2px solid #ff7043; 
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffff; 
+            max-width: 90%;
+        }
+        .message-container h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+        @media (max-width: 600px) {
+            .message-container h1 {
+                font-size: 1.5em;
+            }
+        }
+        @media (max-width: 455px) {
+            .message-container {
+                margin: 0 10px;
+            }
+        }
+        .Imagen {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 81%;
+            height: auto;
+        }
+        .Imagen.bounce {
+            animation: bounce 1s;
+        }
+        .Imagen:hover{
+            opacity: 75%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        <h1>Lo siento, pero no se puede acceder a la página desde un teléfono.</h1>
+    </div>
+    <img class="Imagen" src="Recursos/Imagenes/Kitty.jpg" alt="Imagen no disponible">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const Imagen = document.querySelector('.Imagen');
+            const audio = new Audio('Recursos/SFX/Gato-Riendo.mp3');
+    
+            function playAnimation(element, animationClass) {
+                element.classList.add(animationClass);
+                setTimeout(() => {
+                element.classList.remove(animationClass);
+            }, 1000);
+        }
+    
+            Imagen.addEventListener('click', () => {
+                audio.play();
+                playAnimation(Imagen, 'bounce');
+            });
+    });
+        </script>
+</body>
+</html>
+<!--
+__     ___          _____     
+\ \   / (_)_  _____|__  /_  __
+ \ \ / /| \ \/ / _ \ / /\ \/ /
+  \ V / | |>  < (_) / /_ >  < 
+   \_/  |_/_/\_\___/____/_/\_\ 
+-->
+  
+<!--
+    .----.    
+   / .-"-.`.  \v/
+   | | '\ \ \_/ )
+ ,-\ `-.' /.'  /
+'---`----'----'
+-->
+
+<!--
+🅃🄸🄼🄴🄻🄴🅂🅂 🄵🄻🄾🅆🄴🅁🅂
+-->
