@@ -4,9 +4,9 @@ function TermSearch() {
 
         if (searchTerms.includes(searchTerm)) {
             if (searchTerm.includes('rascar')) {
-                window.open('secreto.html', '_blank');
+                window.open('Secreto.html', '_blank');
         }   else if (searchTerm.includes('puzzle')) {
-                window.open('puzzle.html', '_blank');
+                window.open('Puzzle.html', '_blank');
         }   else if (searchTerm.includes('credits')) {
             window.open('credits.html', '_blank');
         }
